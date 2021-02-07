@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="..\HF3.css">
+
+        <style>
+
+            /*CANVAS AREA FOR PROJECT--------------------------------*/ 
+            div.master{
+                background-color: white;
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: var(--canvaswidth);
+                margin-top: var(--canvasmargin);
+            }
+
+            div.master2{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: var(--canvaswidth);
+                margin-top: var(--canvasmargin);
+            }
+
+            div.project_title{
+                font-family: var(--font_sans);
+                font-weight: 200;
+                font-size: 72px;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+                padding: 10px;
+                margin-left: 10px;
+                position: absolute;
+                color: black;
+                text-align: left;
+                left: 0;
+                bottom: 0;
+            }
+
+            div.project_image{
+                display: flex;
+                position: relative;
+                width: 100%;
+            }
+
+            div.project_macrodiagram{
+                display: flex;
+                position: relative;
+                width: 70%;
+                margin-top: 80px;
+            }
+
+            div.project_macrodiagramcap{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                position: relative;
+                width: 30%;
+            }
+
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
+
+            /*CONTAINERS FOR PROJECT DESCRIPTION AND DATA------------*/ 
+            div.project_desc{
+                width: 50%;
+            }
+
+            div.data{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 5px;
+                margin: 10px;
+                font-family: var(--font_cond);
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 22px;
+            }
+
+            div.data_label{
+                padding: 0px;
+                margin: 0px;
+                width: 25%;
+                border-bottom: 1px solid black;
+            }
+
+            div.data_field{
+                padding: 0px;
+                margin: 0px;
+                width: 75%;
+                border-bottom: 1px solid black;
+            }
+
+            /*CONTAINERS FOR CAPTIONS AND HEADERS-----------------------*/ 
+            div.caption{
+                width: 50%;
+                position: absolute;
+                bottom: 0;
+            }
+
+            /*TEXT FORMATTING-----------------------*/ 
+            p{
+                font-family: var(--font_cond);
+                font-weight: 400;
+                font-size: 15px;
+                padding: 5px;
+                line-height: 19px;
+                margin: 10px;
+            }
+
+            p.desc{
+                border: 1px solid black;
+            }
+
+            p.invert{
+                color: rgb(170, 170, 170);
+                margin-top: auto;
+                align-self: flex-end;
+            }
+
+            span.white{
+                color: white;
+            }
+
+            span.bold{
+                font-weight: 700;
+            }
+
+            span.boldinvert{
+                color: white;
+                font-weight: 700;
+            }
+
+            ul{
+                font-family: var(--font_cond);
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 28px;
+                padding-left: 40px;
+                color: rgb(170, 170, 170);
+                margin-top: auto;
+                align-self:baseline;
+            }
+
+            /*ORDERING-----------------------*/ 
+            #_1 {order: 1;}
+            #_2 {order: 2;}
+            #_3 {order: 3;}
+            #_4 {order: 4;}
+            #_5 {order: 5;}
+            #_6 {order: 6;}
+            #_7 {order: 7;}
+            #_8 {order: 8;}
+            #_9 {order: 9;}
+            #_10 {order: 10;}
+            #_11 {order: 11;}
+            #_12 {order: 12;}
+
+
+            /*FOR SCREENS LESS THAN 800px WIDE-----------------------*/ 
+            @media screen and (max-width: 800px) {
+                div.project_desc{
+                    width: 100%;
+                }
+
+                div.project_title{
+                    font-size: 42px;
+                }
+
+                div.project_macrodiagram{
+                    width: 100%;
+                    margin-top: 0px;
+                }
+
+                div.project_macrodiagramcap{
+                    width: 100%;
+                    flex-direction: row;
+                }
+
+                ul{
+                    margin-top: 0px;
+                }
+
+                p.invert{
+                    margin-top: 10px;
+                    margin-bottom: 80px;
+                }
+
+                #_4 {order: 5;}
+                #_5 {order: 4;}
+                #_6 {order: 7;}
+                #_7 {order: 6;}
+                #_8 {order: 9;}
+                #_9 {order: 8;}
+                #_10 {order: 11;}
+                #_11 {order: 10;}
+            }
+
+        </style>
+    </head>
+
+<!-------------------------------------------------------------------------->
+    <body>
+        <div class="top">
+            <a href="..\index.html" class="home">Kevin W Franklin</a>
+            <a class="about">about</a>
+        </div>
+
+        <div class="master">
+            <div class="project_image" id="_1">
+                <img src="PSTH_Laum.jpg">
+                <div class="project_title">After the Juice Train</div>
+            </div>
+    
+
+            <div class="project_desc" id="_2">
+                <p class="desc"><span class="bold">Reimagining Small Railway Stops</span><br>This project, my final thesis and last academic project, explored the potential of new developments in railway transit to influence small towns. The majority of small towns throughout the southeastern U.S. were formed along railways, but many are no longer connected to passenger trains. The ones that are often are no more than a small place to wait. The building that was developed explored the possibility of synthesizing other programmatic elements with the station in order to create a more dynamic destination to reinforce the already important role that the historic center plays within the town.</p>
+            </div>
+
+            <div class="project_desc" id="_3">
+                <div class="data">
+                    <div class="data_label">Location</div>
+                    <div class="data_field">Plant City, FL</div>
+                    <div class="data_label">Year</div>
+                    <div class="data_field">Spring 2011 (Fifth Year)</div>
+                    <div class="data_label">Type</div>
+                    <div class="data_field">Academic (Thesis)</div>
+                    <div class="data_label">Program</div>
+                    <div class="data_field">Train station, grocery store, & bookstore</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="master2">
+            <div class="project_macrodiagramcap" id="_4">
+                <ul>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite1.png);">Light Rail Systems</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite2.png); ">Rapid Transit Systems</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite3.png);">High-Speed Rail Hubs</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite4.png);">Commuter Rail Hubs</li>
+                </ul>
+
+                <ul>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite5.png);">Cities investing in <span class="white">one</span> type</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite6.png);">Cities investing in <span class="white">two</span> types</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite7.png);">Cities investing in <span class="white">three</span> types</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite8.png);">Cities investing in <span class="white">all four</span> types</li>
+                </ul>
+
+
+                <p class="invert"><span class="boldinvert">Cities Investing in Rail Transit</span><br>Cities nationwide are investing in rail transit to relieve highway congestion and ameliorate growth. New high-speed, commuter, rapid transit, and light-rail systems are being developed, and many currently operating are slated for or in the process of expansion.</p>
+            </div>
+
+            <div class="project_macrodiagram" id="_5">
+                <img src="PSTH_Natn.png">
+            </div>
+
+            <div class="project_macrodiagramcap" id="_6">
+                <ul>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite9.png);">Freight Railways</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite10.png);">Amtrak</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite11.png);">Tri-Rail Commuter Rail (Miami)</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite12.png);">SunRail Commuter Rail (Orlando)</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite13.png);">High Speed Rail (cancelled)</li>
+                    <li style="list-style-image: url(Sprites/PSTH_Sprite14.png);">TBARTA Long Distance Rail (future)</li>
+                </ul>
+
+                <p class="invert"><span class="boldinvert">Railways in Florida</span><br>Florida came into national spotlight with plans for a high-speed rail corridor between Tampa and Orlando, but now this multi-billion dollar project has been cancelled. In spite of this recent cancellation, a multiplicity of local initiatives are still moving forward. Deploying existing freight routes for passenger use is proving to be much more feasible than building new rails and obtaining new right-of-ways. Systems in Miami, Orlando, and Tampa take advantage of track built many years ago throughout the state. Cities and towns born along these lines will have a new chance to connect to rail transit.</p>
+            </div>
+
+            <div class="project_macrodiagram" id="_7">
+                <img src="PSTH_Flor.png">
+            </div>
+
+            <div class="project_macrodiagramcap" id="_8">
+                <p class="invert"><span class="boldinvert">Thesis Argument</span><br>While transit hubs are often highly visible projects that establish regional connections, transit notes – intermediate stops along a route – are just as important as they connect local population clusters that would not otherwise have access to the network. The problem is, as of now, many of these nodes are nothing more than a covered place to wait for the train. As more people begin riding trains, it will be important to think of these places as more dynamic hubs integrated into the city.</p>
+            </div>
+
+            <div class="project_macrodiagram" id="_9">
+                <img src="PSTH_Thes.png">
+            </div>
+
+            <div class="project_macrodiagramcap" id="_10">
+                <p class="invert"><span class="boldinvert">Plant City</span><br>Plant City is one of the largest cities in central Florida without an Amtrak stop, and is one of the most likely to be connected in the near future. The historic downtown – the social heart of the city – straddles the old South Florida Railroad where trains carrying automobiles, phosphate, and orange juice pass by. The addition of passengers to this line provides the opportunity to create a new node that can reinforce the importance of the city center. Through the addition of supplimental programs (a bookstore and small grocery store) this small transit node can transcend its infrastructural role and become a functioning part of the city.</p>
+            </div>
+
+            <div class="project_macrodiagram" id="_11">
+                <img src="PSTH_Plnt.png">
+            </div>
+        </div>
+
+        <div class="master" style="margin-top: 40px;">
+            <div class="project_image">
+                <img src="PSTH_Urbn.jpg">
+                <div class="caption">
+                    <p><span class="bold">Urban Strategy</span><br>The new building bounds the park</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Prog.jpg">
+                <div class="caption">
+                    <p><span class="bold">Program Strategy</span><br>Functions added to the station compliment existing ones nearby</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Traf.jpg">
+                <div class="caption">
+                    <p><span class="bold">Access + Entry Strategy</span><br>The site must accommodate multiple types of entry from all four sides</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Frm1.jpg">
+                <div class="caption">
+                    <p><span class="bold">#1.) Stratify Program Vertically</span><br>Due to the small footprint of the site, the bookstore and grocery store are situated above the train station</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Frm2.jpg">
+                <div class="caption">
+                    <p><span class="bold">#2.) Wall of Shelves</span><br>The shelves, being the common element between the programs, are consolidated into a single apparatus</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Frm3.jpg">
+                <div class="caption">
+                    <p><span class="bold">#3.) Push + Pull</span><br>The wall is deformed to create nodal (rather than linear) breakout spaces in the public space below</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Frm4.jpg">
+                <div class="caption">
+                    <p><span class="bold">#4.) Connect Entries</span><br>The wall of shelves is carved to allow circulation through and entries from all sides to flow together</p>
+                </div>
+            </div>
+
+            <div class="project_image">
+                <img src="PSTH_Frm5.jpg">
+                <div class="caption">
+                    <p><span class="bold">#5.) Extend Paths</span><br>Floor slabs are extended to define entries and create sub-spaces away from the shelving</p>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

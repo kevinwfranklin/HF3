@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="HF3.css">
+
+
+        <style>
+            div.matrix{
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: var(--canvaswidth);
+                margin-top: var(--canvasmargin);
+            }
+
+            a.image{
+                flex: 30%;
+                margin: var(--canvasmargin);
+                position: relative;
+                outline: 1px solid white;
+            }
+
+            a.ghost{
+                flex: 30%;
+                margin: var(--canvasmargin);
+                position: relative;
+            }
+
+            img.matrix{
+                width: 100%;
+                height: 100%;
+            }
+
+            img.matrix:hover{
+                opacity: 0.6;
+            }
+            
+            div[class^="title"]{
+                font-family: var(--font_sans);
+                font-weight: 300;
+                font-size: 21px;
+                padding: 6px;
+                margin-left: 4px;
+                margin-right: 4px;
+                position: absolute;
+
+                
+            }
+
+            div[class^="title_lt"]{
+                color: white;
+                text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+            }
+
+            div[class^="title_dk"]{
+                color: black;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            }
+
+            div.title_lt_top_left{
+                text-align: left;
+                left: 0;
+                top: 0;
+            }
+
+            div.title_lt_top_right{
+                text-align: right;
+                right: 0;
+                top: 0;
+            }
+
+            div.title_lt_bot_left{
+                text-align: left;
+                left: 0;
+                bottom: 0;
+            }
+
+            div.title_lt_bot_right{
+                text-align: right;
+                right: 0;
+                bottom: 0;
+            }
+
+            div.title_dk_top_left{
+                text-align: left;
+                left: 0;
+                top: 0;
+            }
+
+            div.title_dk_top_right{
+                text-align: right;
+                right: 0;
+                top: 0;
+            }
+
+            div.title_dk_bot_left{
+                text-align: left;
+                left: 0;
+                bottom: 0;
+            }
+
+            div.title_dk_bot_right{
+                text-align: right;
+                right: 0;
+                bottom: 0;
+            }
+
+
+            @media screen and (max-width: 900px) {  
+                a.image{
+                    flex: 40%;
+                }
+            }
+
+            @media screen and (max-width:500px){
+                a.image{
+                    flex: 100%;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="top">
+            <a class="home">Kevin W. Franklin</a>
+            <a class="about">about</a>
+        </div>
+        
+        <div class="matrix">
+       
+            <a class="image" href="PS10/PS10.html">
+                <img class="matrix" src="Matrix/PS10_Matrix.jpg">
+                <div class="title_lt_top_right">1020 Annunciation</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PS11_Matrix.jpg">
+                <div class="title_lt_top_right">Central City Elementary School</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PS13_Matrix.jpg">
+                <div class="title_lt_top_right">Piazza(le) Ostiense</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PS14_Matrix.jpg">
+                <div class="title_lt_top_right">Stranded Slopeside</div>
+            </a>
+ 
+            <a class="image">
+                <img class="matrix" src="Matrix/PS15_Matrix.jpg">
+                <div class="title_lt_bot_left">Mid City Mercantile</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PSSF_Matrix.jpg">
+                <div class="title_lt_bot_left">Strawblurry Fields</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PSDN_Matrix.jpg">
+                <div class="title_dk_top_left">Danaus</div>
+            </a>
+
+            <a class="image" href="PSTH/PSTH.html">
+                <img class="matrix" src="Matrix/PSTH_Matrix.jpg">
+                <div class="title_dk_bot_left">After the Juice Train</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PWHR_Matrix.jpg">
+                <div class="title_lt_bot_left">Wheelahan Residence</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PMSY_Matrix.jpg">
+                <div class="title_lt_bot_left">New Orleans Int'l Airport</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PBTH_Matrix.jpg">
+                <div class="title_lt_bot_left">Bartholomew Clubhouse</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PWDC_Matrix.jpg">
+                <div class="title_dk_top_left">Wetlands Discovery Center</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PFAT_Matrix.jpg">
+                <div class="title_dk_bot_right">Fat City</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PAFM_Matrix.jpg">
+                <div class="title_dk_top_right">Air Force Laundry Prototypes</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PWTC_Matrix.jpg">
+                <div class="title_lt_top_right">2 Canal Street</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PRDR_Matrix.jpg">
+                <div class="title_lt_bot_left">Miscellaneous Renderings</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PBGW_Matrix.jpg">
+                <div class="title_lt_top_left">BGW Dentistry Braselton</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PGUD_Matrix.jpg">
+                <div class="title_dk_top_right">Georgia Urology Canopy</div>
+            </a>
+
+            <a class="image">
+                <img class="matrix" src="Matrix/PLIM_Matrix.jpg">
+                <div class="title_lt_top_left">Cedarcrest Dental</div>
+            </a>
+
+            <a class="image" href="PJOR/PJOR.html">
+                <img class="matrix" src="Matrix/PJOR_Matrix.jpg">
+                <div class="title_lt_bot_left">Jordan Dentistry</div>
+            </a>
+
+            <a class="ghost"></a>
+
+        </div>
+
+    </body>
+</html>
